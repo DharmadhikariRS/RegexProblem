@@ -16,6 +16,7 @@ namespace RegexProblems
         public Regex PasswordMin8Char = new Regex(@"[A-Z a-z 0-9]{8,}");
         public Regex PasswordMin8Char2 = new Regex(@"(?=.*[A-Z])[A-Za-z0-9]{8,}");
         public Regex PasswordDigitRegex = new Regex(@"(?=.*[0-9])[A-Za-z0-9]{8,}");
+        public Regex PasswordSpecialRegex = new Regex(@"(?=.*[#?!@$%^&*-])[A-Za-z0-9].{8,}");
         public void CheckFirstName(string fName)   ///UC1
         {
             Console.WriteLine("first name is : " + fName);
@@ -97,6 +98,19 @@ namespace RegexProblems
         {
             Console.WriteLine("Password is : " + pass);
             if (PasswordDigitRegex.IsMatch(pass))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
+
+            }
+        }
+        public void CheckPasswordWithSpecialChar(string pass)
+        {
+            Console.WriteLine("Password is : " + pass);
+            if (PasswordSpecialRegex.IsMatch(pass))
             {
                 Console.WriteLine("Valid Password");
             }

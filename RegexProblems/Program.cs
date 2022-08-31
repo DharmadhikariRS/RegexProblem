@@ -27,6 +27,9 @@
             //UC7
             regexProblem.CheckPasswordWithSingleNumber("Abcdefg1");
             regexProblem.CheckPasswordWithSingleNumber("Abcdefgh");
+
+            //UC8
+            regexProblem.CheckPasswordWithSpecialChar("123456@abcd");
         }
     }
 }
