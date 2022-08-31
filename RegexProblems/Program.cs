@@ -23,6 +23,10 @@
 
             //UC6
             regexProblem.CheckPass8CharWithUpperCase("14baAcsds");
+
+            //UC7
+            regexProblem.CheckPasswordWithSingleNumber("Abcdefg1");
+            regexProblem.CheckPasswordWithSingleNumber("Abcdefgh");
         }
     }
 }
