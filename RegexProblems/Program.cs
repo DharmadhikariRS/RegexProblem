@@ -11,6 +11,10 @@
 
             ///UC2
             regexProblem.CheckLatName("Dharmadhikari");
+
+            ///UC3
+           
+            regexProblem.CheckEmail("abc.xyz@bl.co.in");
         }
     }
 }

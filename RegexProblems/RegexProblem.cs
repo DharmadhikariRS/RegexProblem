@@ -11,6 +11,7 @@ namespace RegexProblems
     {
         public Regex FirstName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
         public Regex LastName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
+        public Regex Email = new Regex(@"^[a-z A-Z 0-9 .+_-]+@[a-z A-Z 0-9 -.]+[.][a-z A-Z 0-9 -]{2,}$");
         public void CheckFirstName(string fName)   ///UC1
         {
             Console.WriteLine("first name is : " + fName);
@@ -34,6 +35,19 @@ namespace RegexProblems
             else
             {
                 Console.WriteLine("Invalid Last name");
+            }
+            Console.WriteLine();
+        }
+        public void CheckEmail(string email)    //UC3
+        {
+            Console.WriteLine("Email Id is : " + email);
+            if (Email.IsMatch(email))
+            {
+                Console.WriteLine("Valid Email Id");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Email Id");
             }
             Console.WriteLine();
         }
