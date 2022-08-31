@@ -18,6 +18,8 @@
 
             ///UC4
             regexProblem.CheckMobilNumber("91 8329806536");
+            ///UC5
+            regexProblem.CheckPassWord8Char("12345ccd");
         }
     }
 }
