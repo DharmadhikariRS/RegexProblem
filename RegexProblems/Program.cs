@@ -8,6 +8,9 @@
             RegexProblem regexProblem = new RegexProblem();
             //UC1
             regexProblem.CheckFirstName("Rushi");
+
+            ///UC2
+            regexProblem.CheckLatName("Dharmadhikari");
         }
     }
 }
