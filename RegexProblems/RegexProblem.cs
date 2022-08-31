@@ -14,6 +14,7 @@ namespace RegexProblems
         public Regex Email = new Regex(@"^[a-z A-Z 0-9 .+_-]+@[a-z A-Z 0-9 -.]+[.][a-z A-Z 0-9 -]{2,}$");
         public Regex MobileNumber = new Regex(@"[0-9]{1,2}\s[0-9]{10}");
         public Regex PasswordMin8Char = new Regex(@"[A-Z a-z 0-9]{8,}");
+        public Regex PasswordMin8Char2 = new Regex(@"(?=.*[A-Z])[A-Za-z0-9]{8,}");
         public void CheckFirstName(string fName)   ///UC1
         {
             Console.WriteLine("first name is : " + fName);
@@ -78,5 +79,19 @@ namespace RegexProblems
 
             }
         }
+        public void CheckPass8CharWithUpperCase(string pass)
+        {
+            Console.WriteLine("Password is : " + pass);
+            if (PasswordMin8Char2.IsMatch(pass))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
+
+            }
+        }
+
     }
 }
