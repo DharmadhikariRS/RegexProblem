@@ -15,6 +15,9 @@
             ///UC3
            
             regexProblem.CheckEmail("abc.xyz@bl.co.in");
+
+            ///UC4
+            regexProblem.CheckMobilNumber("91 8329806536");
         }
     }
 }
